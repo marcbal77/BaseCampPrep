@@ -19,3 +19,7 @@ One can run the command:
 npx hardhat
 within the root of the project to get a list of all the commands and options that are available.
 ```
+
+Remember that Solidity is a compiled language that let's one write human readable code that translates into bit code for the blockchain.
+
+Note: there is a console log for hardhat that is great for useful for testing.

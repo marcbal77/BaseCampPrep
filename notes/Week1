@@ -1,0 +1,33 @@
+ 1. Introduction (Video) 
+
+Ethereum = Decentralized Global Computer
+
+Ethereum vs Bitcoin:
+
+1. Ethereum is fundamentally different
+2. Turing Complete (any program can be run on ethereum - loops allowed)
+3. White Papers - BTC (electronic transaction w/o trust, decentralized P2P digital payment network) while Ethereum is a next generation smart contract and dapp platform that goes beyond payments and money.
+4. Scripting - proposed changes for bitcoin were rejected then proposed ethereum
+5. Bitcoin: 
+    1. Lack of Turing completeness for Bitcoin (w/o loops or recursion can’t handle complex computations)
+    2. Lack of State 
+6. Ethereum uses gas 
+7. Ethereum uses Solidity - a high level object oriented language that is syntactically similar other JavaScript
+    1. Code is compiled into byte code 
+    2. Application Binary Interface: used to interact with deployed smart contracts
+        1. This intereprets bite code and makes it human readable
+    3. ABI’s allow you to call your smart contracts externally
+    4. Like from a traditional front-end written in javascript
+
+Key Use Cases & Applications on Ethereum
+1. Token Systems: Fungible (ERC-20 - voting, staking, virtual currencies) and Non-fungible (ERC-721 - Deed, Artwork, Song)
+2. Financial Derivatives - most common application of a smart contract (2020’s) - lending/borrowing protocols (AAVE / UNISWAP)
+3. Stablecoins (Stable Value Currencies) - A value of a digit asset is pegged to a reference asset (like a fiat currency: ex: USD)
+4. Identity & Reputation Systems - Example: ENS - Ethereum name service can be used to identify (authentication) as well as reputation
+5. Decentralized File Storage - Ex: file coin where someone can rent out un used storage space on a drive
+    1. IPFS - interplanetary file storage
+6. Decentralized Autonomous Organizations (DAO) - uniswap example
+7. On-chain decentralized marketplaces
+8. On-chain prediction markets
+9. Smart Multi-Signature Escrows
+10. Decentralized Data Feeds 
