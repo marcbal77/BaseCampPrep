@@ -9,6 +9,7 @@ contract Lock {
     address payable public owner;
 
     event Withdrawal(uint amount, uint when);
+    event Deposit(uint amount, uint when);
 
     constructor(uint _unlockTime) payable {
         require(
@@ -30,5 +31,19 @@ contract Lock {
         emit Withdrawal(address(this).balance, block.timestamp);
 
         owner.transfer(address(this).balance);
+    }
+
+        //what is payable in this declaration?
+    function deposit() public payable {
+        //make it so the user can't withdraw funds after the deposit date
+        require(
+            block.timestamp <= unlockTime,
+            "You can't deposit after unlock"
+            );
+        //let's make sure our user's cannot deposit funds into the wrong piggy bank
+        require(msg.sender == owner, "You aren't the owner");
+
+        //emit Deposit event for contract
+        emit Deposit(msg.value, block.timestamp);
     }
 }
