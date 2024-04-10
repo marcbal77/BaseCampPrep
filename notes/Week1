@@ -31,3 +31,80 @@ Key Use Cases & Applications on Ethereum
 8. On-chain prediction markets
 9. Smart Multi-Signature Escrows
 10. Decentralized Data Feeds 
+
+Week 1: Introduction to Solidity
+
+================================================
+INTRODUCTION
+================================================
+
+Solidity is Ethereum’s languages for developing smart contracts. It is inspired by C++, Python, and JavaScript 
+
+Remix IDE - online interactive development environment to develop smart contracts with solidity
+
+Features of Solidity:
+- Inheritance
+    - What is inheritance in programming?
+		Inheritance in programming is a mechanism where a class (sub-class) can inherit properties and behavior from another class (super-class). It promotes code reusability and establishes a hierarchical relationship between classes.
+
+- Libraries
+- Data Types
+- Complex user-defined types
+- Variables
+- Functions
+- Function Modifiers
+- Events
+
+Creating smart contracts in solidity requires:- Writing Source Code
+- Compiling Source Code
+- Deploy
+
+Smart Contract Frameworks
+
+- Hardhat
+- Waffle
+- Truffle
+
+These allow you to work locally, commit to git, and do test driven development
+
+Online IDE’s
+
+- Remix 
+
+================================================
+
+SOLIDITY OVERVIEW
+
+https://docs.base.org/base-camp/docs/introduction-to-solidity/solidity-overview 
+
+Solidity is very similar to other programming languages; most developers won't struggle to write familiar operations. However, there are some critically important properties to keep in mind. Operations are much more expensive than in other environments, particularly storage. You can use most of the practices you are accustomed to, but you are limited to very small contract sizes and by the size of the stack. Finally, remember that you should always use a separate wallet for development. If you make a mistake, you could lose anything in it!
+
+Origins TL;DR
+Solidity was developed by the Ethereum Project's Solidity team and was first previewed in 2014 at DevCon0. The original goal was to create an easy-to-use language for smart contract development.
+
+Reference Solidity Documentation if needed:
+https://docs.soliditylang.org/en/v0.8.17/ 
+
+================================================
+
+Introduction to Remix
+
+Features of Using Remix as an IDE:
+	•	Offers a user-friendly interface and built-in Solidity compiler and debugger for efficient coding 1
+	•	Provides an out-of-the-box-ready solution for decentralized app development 3
+	•	Supports various plugins, making it versatile for different development needs 1
+Pros and Cons of Using Remix as an IDE:
+	•	Pros: Streamlines smart contract development, used by experts and beginners, no setup required, quick start for coding 4
+	•	Cons: Limited to smart contract development only, does not support html, css, js, and may have issues with deploying functions 
+
+https://docs.base.org/base-camp/docs/introduction-to-solidity/introduction-to-remix 
+
+
+
+================================================
+
+Deployment in Remix
+
+When you deploy a contract in Ethereum, an address is generated - this address is like the IP address for a server
+
+All ethereum address have 20 character length / hexadecimal 0-9 and A-Z Ex: 0xd9145CCE52D386f254917e481eB44e9943F39138
