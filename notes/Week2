@@ -1,0 +1,25 @@
+Week 2: Control Structures
+
+================================================
+
+- [x] If, Else, and Else If (Video: 4:57)
+
+Link: https://docs.base.org/base-camp/docs/control-structures/standard-control-structures-vid 
+
+Standard Control Structures
+Be able to:
+	- Describe the difference between conditional control structures and iteration control structures
+	- Write conditional control structures: if, else if, else
+	- List the unique constraints for control flow structures in Solidity
+
+================================================
+
+- [ ] Loops (Video: 8:58)
+
+Link: https://docs.base.org/base-camp/docs/control-structures/loops-vid 
+
+Be able to:
+	- Use iteration control structures: for, break and continue to control the flow of your smart contracts
+
+Loops are useful to repeat certain pieces of code until certain conditions are met
+
