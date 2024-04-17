@@ -6,6 +6,7 @@ import "hardhat/console.sol";
 
 contract ControlStructures {
     function compareNumbers(uint256 _number1, uint _number2) external pure returns(string memory) {
+        require(_number1>0 && _number2>0, "Invalid Data");
         // number1 > number2 => "Number 1 is greater than Number 2"
         // number2 < number2 => "Number 1 is less than Number 2"
         // number1 = number2 => "Number 1 is equal to Number 2"
