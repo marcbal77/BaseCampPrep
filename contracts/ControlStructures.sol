@@ -23,6 +23,19 @@ contract ControlStructures {
         // for (initialization; condition; increment)
         for(uint256 index=0; index<8; index++){
             console.log("The index is", index);
+
+            if(index == 2) {
+                console.log("Index is 2");
+                continue;
+            }
+
+            console.log("After index == 2");
+
+            if(index == 4) {
+                console.log("Index is 4");
+                break;
+            }
+            console.log("End of the loop");
         }
     }
 }
