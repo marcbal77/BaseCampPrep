@@ -108,3 +108,17 @@ Deployment in Remix
 When you deploy a contract in Ethereum, an address is generated - this address is like the IP address for a server
 
 All ethereum address have 20 character length / hexadecimal 0-9 and A-Z Ex: 0xd9145CCE52D386f254917e481eB44e9943F39138
+
+For the Greeting.sol file, remember:
+
+`external pure returns (string memory)` serves as a crucial component of the function declaration. Here’s what each part means:
+
+1. **`external`**: This keyword specifies the visibility of the function. An `external` function can only be called from outside the contract itself (not internally by other functions within the same contract unless through `this`). It's often used when a function needs to be called by other contracts or transactions, but not by other functions inside the same contract.
+
+2. **`pure`**: This keyword indicates that the function does not read from or modify the state of the blockchain. A `pure` function can only operate on its own parameters and can return values. It ensures that running the function won't affect the contract's data or any blockchain state. This is useful for functions that do calculations or return constant values.
+
+3. **`returns (string memory)`**: This part specifies the return type of the function. `string` is a data type in Solidity for text data. The `memory` keyword indicates that the string is stored in memory, which is a temporary place to store data during function execution. This is opposed to storing data in the blockchain, which would use `storage` and persist between transactions.
+
+The positioning of `external pure returns (string memory)` between the function name with its parameters (`sayHello()`) and the function’s body enclosed in curly braces `{}` follows the syntax of Solidity for function declarations. The syntax helps define how the function behaves (its visibility and effects on the state), and what it outputs before detailing what it actually does in the body.
+
+This structure ensures that anyone reading the contract can immediately understand the function's interface and constraints before getting into the details of its implementation.
