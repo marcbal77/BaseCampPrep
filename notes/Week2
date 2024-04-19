@@ -23,3 +23,64 @@ Be able to:
 
 Loops are useful to repeat certain pieces of code until certain conditions are met
 
+You can use For Loops by stating (initialization; condition; increment) after for
+
+Example Loop Function us for:
+
+    function loop() external pure {
+        // for (initialization; condition; increment)
+        for(uint256 index=0; index<8; index++){
+            console.log("The index is", index);
+        }
+    }
+
+Above the function is made external with the external call and pure is recommended by vscode with a warning.
+
+The function can be declared as ﻿pure to improve clarity and potentially reduce gas costs. This warning suggests making the function immutable.
+
+The ++ after index++ is simply adding 1 each loop and the equivalent of index + 1
+
+
+
+================================================
+
+- [ ] Require, Revert, and Error (Video: 7:12)
+
+Link
+
+TBD
+
+================================================
+
+- [ ] Control Structures (Article)
+
+Link: https://docs.base.org/base-camp/docs/control-structures/ 
+
+Main Objective:
+
+* Control code flow with if, else, while, and for
+* List the unique constraints for control flow in Solidity
+* Utilize require to write a function that can only be used when a variable is set to true
+* Write a revert statement to abort execution of a function in a specific state
+* Utilize error to control flow more efficiently than with require
+
+
+
+================================================
+
+- [ ] Control Structures Exercise
+
+Link: 
+
+Objectives
+
+- Control code flow with if, else, while, and for
+- List the unique constraints for control flow in Solidity
+- Utilize require to write a function that can only be used when a variable is set to true
+- Write a revert statement to abort execution of a function in a specific state
+- Utilize error to control flow more efficiently than with require
+
+Solidity does not support “switch,” “forEach,” “in,” “of,” ….
+
+Parameters and Arguments are used with functions to pass and accept data when functions are called.
+Conditional Statements use expressions to control the flow of the program based on conditions evaluated at runtime.
