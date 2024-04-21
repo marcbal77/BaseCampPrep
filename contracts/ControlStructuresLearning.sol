@@ -5,8 +5,12 @@ pragma solidity 0.8.19;
 import "hardhat/console.sol";
 
 contract ControlStructures {
+    error InvalidNumber();
+
     function compareNumbers(uint256 _number1, uint _number2) external pure returns(string memory) {
-        require(_number1>0 && _number2>0, "Invalid Data");
+        if(_number1 == 0 && _number2 == 0){
+            revert InvalidNumber();
+        }
         // number1 > number2 => "Number 1 is greater than Number 2"
         // number2 < number2 => "Number 1 is less than Number 2"
         // number1 = number2 => "Number 1 is equal to Number 2"
