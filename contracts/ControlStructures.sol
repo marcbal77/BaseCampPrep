@@ -25,4 +25,22 @@ contract ControlStructures {
             return "Splat";                    
         }
     }
+
+    function doNotDisturb(uint _time) external pure returns(string memory) {
+        
+        if (_time >= 2400) {
+        // If _time is greater than or equal to 2400, trigger a panic
+            assert(condition);
+        } else if 
+        // If _time is greater than 2200 or less than 800, revert with a custom error of AfterHours, and include the time provided
+        
+        // If _time is between 1200 and 1259, revert with a string message "At lunch!"
+        
+        // If _time is between 800 and 1199, return "Morning!"
+        
+        // If _time is between 1300 and 1799, return "Afternoon!"
+        
+        // If _time is between 1800 and 2200, return "Evening!"
+
+    }
 }
