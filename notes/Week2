@@ -14,7 +14,7 @@ Be able to:
 
 ================================================
 
-- [ ] Loops (Video: 8:58)
+- [x] Loops (Video: 8:58)
 
 Link: https://docs.base.org/base-camp/docs/control-structures/loops-vid 
 
@@ -40,15 +40,24 @@ The function can be declared as ﻿pure to improve clarity and potentially reduc
 
 The ++ after index++ is simply adding 1 each loop and the equivalent of index + 1
 
+Covers if statements and includes, continue and break
 
+Within loops continue will begin next cycle of the loop and discontinue the remaining code within the function, but not stop the loops.
+
+Within loops break will stop the next cycle of the loop and exit out of the function.
 
 ================================================
 
-- [ ] Require, Revert, and Error (Video: 7:12)
+- [x] Require, Revert, and Error (Video: 7:12)
 
-Link
+Link: https://docs.base.org/base-camp/docs/control-structures/require-revert-error-vid 
 
-TBD
+Utilize require, revert and errors to control the flow of your programs
+
+When a condition is not met within the require that we stipulate, it will trigger an exception that will revert all state changes completed and refund all the left over gas to the person calling the function.
+
+Solidity from the version 0.8.4 introduces something called custome errors: very good in comparison to require, since it consumes less gas
+
 
 ================================================
 
@@ -58,11 +67,24 @@ Link: https://docs.base.org/base-camp/docs/control-structures/
 
 Main Objective:
 
-* Control code flow with if, else, while, and for
-* List the unique constraints for control flow in Solidity
-* Utilize require to write a function that can only be used when a variable is set to true
-* Write a revert statement to abort execution of a function in a specific state
-* Utilize error to control flow more efficiently than with require
+- Control code flow with if, else, while, and for
+- List the unique constraints for control flow in Solidity
+- Utilize require to write a function that can only be used when a variable is set to true
+- Write a revert statement to abort execution of a function in a specific state
+- Utilize error to control flow more efficiently than with require
+
+Conditional Control Structure Examples
+
+The if, else if, and else statements work
+
+
+* Solidity does not support “switch,” “forEach,” “in,” “of,” ….
+
+* Parameters and Arguments are used with functions to pass and accept data when functions are called.
+* Conditional Statements use expressions to control the flow of the program based on conditions evaluated at runtime.
+
+Iterative Control Structures
+The `while`, `for`, and `do`, keywords function the same as in other languages. You can use continue to skip the rest of a loop and start the next iteration. break will terminate execution of the loop, and you can use return to exit the function and return a value at any point.
 
 
 
@@ -70,17 +92,21 @@ Main Objective:
 
 - [ ] Control Structures Exercise
 
-Link: 
+Link: https://docs.base.org/base-camp/docs/control-structures/control-structures-exercise 
 
 Objectives
 
-- Control code flow with if, else, while, and for
-- List the unique constraints for control flow in Solidity
-- Utilize require to write a function that can only be used when a variable is set to true
-- Write a revert statement to abort execution of a function in a specific state
-- Utilize error to control flow more efficiently than with require
 
-Solidity does not support “switch,” “forEach,” “in,” “of,” ….
 
-Parameters and Arguments are used with functions to pass and accept data when functions are called.
-Conditional Statements use expressions to control the flow of the program based on conditions evaluated at runtime.
+You can use the modulo operator (%) in the condition statement to check if a number is divisible by 3. Here's how you would write it in Solidity:
+
+if (number % 3 == 0) {
+    // The number is divisible by 3
+}
+
+
+
+Deployed to Base Sepolia Testnet
+Contract: 0xd73Ff4E5CCd1CF905eb84626838d30bd80cfe9a5
+
+BaseSepoliaScan: https://sepolia.basescan.org/address/0xd73ff4e5ccd1cf905eb84626838d30bd80cfe9a5#code 
