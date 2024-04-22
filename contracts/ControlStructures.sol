@@ -26,34 +26,30 @@ contract ControlStructures {
         }
     }
 
-error AfterHours(uint time);
+error AfterHours(uint _time);
 
-    function doNotDisturb(uint _time) public pure returns (string memory) {
-        if (_time >= 2400) {
-            // This will cause a transaction failure with a Panic error (panic code for invalid input)
-            revert("Invalid time: exceeds 24-hour format");
-        }
-        // If _time is greater than 2200 or less than 800, revert with a custom error of AfterHours, and include the time provided
+    function doNotDisturb(uint256 _time) external pure returns (string memory) {
+        assert(_time < 2400);
         if (_time > 2200 || _time < 800) {
+            // If _time is greater than 2200 or less than 800, revert with a custom error of AfterHours, and include the time provided
             revert AfterHours(_time);
         }
-        // If _time is between 1200 and 1259, revert with a string message "At lunch!"
-        if (_time >= 1200 && _time <= 1259) {
+        if (_time > 1200 && _time < 1259) {
+            // If _time is between 1200 and 1259, revert with a string message "At lunch!"
             revert("At lunch!");
         }
-        // If _time is between 800 and 1199, return "Morning!"
         if (_time >= 800 && _time <= 1199) {
+            // If _time is between 800 and 1199, return "Morning!"
             return "Morning!";
-        }
-        // If _time is between 1300 and 1799, return "Afternoon!"
-        if (_time >= 1300 && _time <= 1799) {
+        } else if (_time >= 1300 && _time <= 1799) {
+            // If _time is between 1300 and 1799, return "Afternoon!"        
             return "Afternoon!";
-        }
-        // If _time is between 1800 and 2200, return "Evening!"
-        if (_time >= 1800 && _time <= 2200) {
+        } else if (_time >= 1800 && _time <= 2200) {
+            // If _time is between 1800 and 2200, return "Evening!"            
             return "Evening!";
-        }
+        } else {
         // Just a precautionary line, technically should never hit this due to covered ranges above
-        revert("Invalid time: out of defined ranges");
+            return "Unknown";
+        }
     }
 }
